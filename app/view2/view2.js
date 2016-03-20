@@ -10,22 +10,25 @@ angular.module('myApp.view2', [])
 
 	var control = [
 		{
-			'repartidor':,
+			'repartidor':'Pablo',
 			'date' : '03/03/2016',
 			'xdoce': 15,
-			'xveinte': 19
+			'xveinte': 19,
+			'soda':23
 		},
 		{
-			'repartidor':,
+			'repartidor':'Marcelo P',
 			'date' : '04/03/2016',
 			'xdoce': 5,
-			'xveinte': 9
+			'xveinte': 9,
+			'soda':23
 		},
 		{
-			'repartidor':,
+			'repartidor':'Gustavo',
 			'date': '07/03/2016',
 			'xdoce': 12,
-			'xveinte': 17
+			'xveinte': 17,
+			'soda':23
 		}
 	];
 	$scope.pablo = {};
