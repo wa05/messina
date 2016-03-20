@@ -1,0 +1,18 @@
+<h1>DIA : {{ hoy | date: 'dd-MM-yyyy'}} </h1>
+<h2>Reparto : Pablo</h2>
+		
+		<div ng-repeat="pab in pablo.control">
+			{{pab.date}} - {{pab.xdoce}} - {{pab.xveinte}}
+		</div>
+		<hr>
+		<pre> pablo.control = {{ pablo.control | json}}</pre>
+		
+		
+		<form>
+			<input type="date" ng-model="new.date"></input>
+			<input ng-model="new.xdoce"></input>
+			<input ng-model="new.xveinte"></input>
+			<input type="submit" ng-click="save()" value="Guardar"/>
+		</form>
+		<pre> new = {{ new | json}} </pre>
+</p>
