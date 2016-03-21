@@ -1,43 +1,50 @@
-<h1>DIA : {{ hoy | date: 'dd-MM-yyyy'}} </h1>
-<h2>Reparto : Pablo</h2>
-		
-		<table class="table table-stripped">
-			<thead>
-				<tr>
-					<th>Fecha</th>
-					<th>Repartidor</th>
-					<th>x12</th>
-					<th>x20</th>
-					<th>SODA</th>
-					<th>Total</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr ng-repeat="pab in pablo.control">
-					<td>{{pab.date}}</td>
-					<td>{{pab.repartidor}}</td>
-					<td>{{pab.xdoce}}</td>
-					<td>{{pab.xveinte}}</td>
-					<td>{{pab.soda}}</td>
-					<td>{{pab.total}}</td>
-				</tr>
-			</tbody>
-
-			 
-		</div>
-		</table>
-		<hr>
-		<!--
-		<pre> pablo.control = {{ pablo.control | json}}</pre>
-		
-		-->
-		<form>
-			<input type="date" ng-model="new.date"></input>
-			<input ng-model="new.xdoce"></input>
-			<input ng-model="new.xveinte"></input>
-			<input type="submit" ng-click="save()" value="Guardar"/>
-		</form>
-		<!--
-		<pre> new = {{ new | json}} </pre>
-		-->
-</p>
+<div class="container">
+<p>Datos 2016</p>
+<div class="table-responsive well tabla" >
+	<table class="table table-stripped 	table-hover table-condensed">
+		<thead>
+			<tr>
+				<th>Fecha
+				<span ng-click="order('fecha')" class="sortorder" ng-class="{reverse:reverse}"></span>
+				</th>
+				<th>Repartidor
+					<span ng-click="order('repartidor')" class="sortorder"></span>
+				</th>
+				<th>x12
+					<span ng-click="order('xdoce')" class="sortorder"></span>
+				</th>
+				<th>x20
+					<span ng-click="order('xveinte')" class="sortorder"></span>
+				</th>
+				<th>Soda
+					<span ng-click="order('soda')" class="sortorder"></span>
+				</th>
+				<th>Total
+					<span ng-click="order('totaldia')" class="sortorder"></span>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="pab in pablo.control">
+				<td>{{pab.fecha | date:'dd-MM-yyyy'}}</td>
+				<td>{{pab.repartidor}}</td>
+				<td>{{pab.xdoce}}</td>
+				<td>{{pab.xveinte}}</td>
+				<td>{{pab.soda}}</td>
+				<td>{{pab.total}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+	<hr>
+</div>
+<div class="celdas">
+<div class="container">
+	<form role="form">
+		<input type="date" ng-model="new.fecha"></input>
+		<input ng-model="new.xdoce"></input>
+		<input ng-model="new.xveinte"></input>
+		<input class=" btn btn-primary" type="submit" ng-click="save()" value="Guardar"/>
+	</form>
+</div>
+</div>
